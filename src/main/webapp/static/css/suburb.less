@@ -1,0 +1,233 @@
+@font-general: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@content-top: 93px;
+@min-smart-phone-width: 320px;
+@max-smart-phone-width: 760px;
+
+/* color */
+@color-default: #58666e;
+@color-white: #FFFFFF;
+
+@color-light: #EDF1F2;
+@color-light-dker: #DDE6E9;
+@color-light-dk: #E4EAEC;
+@color-light-lt: #F3F5F6;
+@color-light-lter: #F6F8F8;
+
+@color-dark: #3A3F51;
+@color-dark-dker: #232735;
+@color-dark-dk: #2E3344;
+@color-dark-lt: #474C5E;
+@color-dark-lter: #54596A;
+
+@color-black: #1C2B36;
+@color-black-dker: #0A1015;
+@color-black-dk: #131E26;
+@color-black-lt: #263845;
+@color-black-lter: #314554;
+
+@color-primary: #7266BA;
+@color-primary-dker: #5244A9;
+@color-primary-dk: #6051B5;
+@color-primary-lt: #847ABF;
+@color-primary-lter: #958DC6;
+
+@color-info: #23B7E5;
+@color-info-dker: #1199C4;
+@color-info-dk: #16AAD8;
+@color-info-lt: #3DBDE5;
+@color-info-lter: #55C3E6;
+
+@color-success: #27C24C;
+@color-success-dker: #1A9C39;
+@color-success-dk: #20AF42;
+@color-success-lt: #31D257;
+@color-success-lter: #48D46A;
+
+@color-warning: #FAD733;
+@color-warning-dker: #FACE00;
+@color-warning-dk: #FCD417;
+@color-warning-lt: #F8DA4E;
+@color-warning-lter: #F7DE69;
+
+@color-danger: #F05050;
+@color-danger-dker: #F21B1B;
+@color-danger-dk: #F13636;
+@color-danger-lt: #F06A6A;
+@color-danger-lter: #F18282;
+
+.border-radius(@radius: 3px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+
+/* top menu */
+.suburb-topmenu {
+	background-color: @color-black-dk;
+	height: 50px;
+	color: @color-light-dker;
+	.border-radius(0px);
+	a {
+		color: @color-light-dker;
+	}
+	
+	.nav {
+		li {
+			a:hover {
+				background-color: @color-black-dker;
+				border: 0;
+			}
+			a:focus {
+				background-color: @color-black-dker;
+				border: 0;
+			}
+		}
+	}
+}
+
+
+
+/* Body */
+body {
+	background-color: #F0F3F4;
+	font-family: @font-general;
+	color: @color-default;
+	font-size: 14px;
+	display: table;
+    width: 100%;
+  	/*background-image: url(http://media.mediatemple.netdna-cdn.com/wp-content/themes/smashing-magazine/images/smbg.png);*/
+}
+
+h1, h2, h3 {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-family: @font-general;
+}
+
+a {
+	cursor: pointer;
+	color: @color-black;
+}
+
+a:hover {
+	color: @color-dark-lt;
+}
+
+.container {
+	width: 80%
+}
+
+.container-top {
+	margin-top: 20px;
+}
+
+.suburb-content {
+	min-height: 700px;
+}
+
+.form-control {
+	input {
+		border: 1px solid #dddddd;
+		.border-radius;
+		color: @color-dark;
+		font-size: 12px;
+	}
+	textarea{
+		border: 1px solid #dddddd;
+		.border-radius;
+		color: @color-dark;
+		font-size: 14px;
+	}
+	select {
+		border: 1px solid #dddddd;
+		.border-radius;
+		color: @color-dark;
+		font-size: 12px;
+	}
+}
+
+/*Content*/
+.suburb-profile {
+	.suburb-header {
+		.container {
+			width: 100%;
+		}
+		height: 300px;
+		background-color: #F9F9F9;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		-webkit-box-shadow: 0 0 4px 1px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0 0 4px 1px rgba(0,0,0,0.15);
+		box-shadow: 0 0 4px 1px rgba(0,0,0,0.15);
+		margin-bottom: 20px;
+		text-shadow: 0 1px 4px rgba(0, 0, 0, .8);
+		color: #FFFFFF;
+		.suburb-name {
+			font-size: 28px;
+			margin-top: 100px;
+			width: 400px;
+		}
+		.suburb-meta {
+			margin-top: 10px;
+			font-size: 18px;
+		}
+		.upload-cover {
+			position: absolute;
+			top: 10px;
+			left: 15px;
+		}
+	}
+	hr {
+		margin-top: 20px;
+		display: block; 
+		height: 1px;
+		border: 0; 
+		border-top: 1px solid #DDDDDD;
+	}
+	.section {
+		background-color: #FFFFFF;
+		margin: 10px;
+		border: 1px solid @color-light-dk;
+		.border-radius;
+		.title {
+			font-size: 14px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			padding: 15px;
+			color: @color-default;
+			background-color: @color-light-lt;
+			.publish-true {
+				font-size: 12px;
+				color: @color-success;
+			}
+			.publish-false {
+				font-size: 12px;
+				color: @color-warning;
+			}
+		}
+		.content {
+			padding: 0 15px;
+		}
+		.description {
+			color: #434a54;
+			line-height: 20px;
+			font-size: 14px;
+			
+		}
+	}
+}
+
+.ft-slide-image {
+	margin: auto;
+}
+
+/*Footer*/
+footer {
+	width: 100%;
+	margin-top: 50px;
+	background-color: @color-light-dker;
+	padding: 20px 0;
+}
